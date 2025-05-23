@@ -1,0 +1,125 @@
+.footer-content {
+  padding-bottom: 40px;
+}
+
+.call-now-button {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    padding-bottom: 60px;
+  }
+}
+
+#carouselImages {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive height adjustments */
+@media (max-width: 768px) {
+  #carouselImages,
+  .carousel-item {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselImages,
+  .carousel-item {
+    height: 250px;
+  }
+}
+
+
+/* Testimonial card hover effects */
+.testimonial-card {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.testimonial-card:hover {
+  background-color: rgba(245, 245, 245, 0.9) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Service feature card hover effects */
+.service-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.service-card:hover {
+  background-color: #e9ecef !important; /* Slightly darker than bg-light */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-card .text-primary {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .text-primary {
+  transform: scale(1.1);
+}
+
+/* Gallery image hover effects */
+.gallery-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-card img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Ensure consistent image heights */
+.gallery-img-container {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .gallery-img-container {
+    height: 180px;
+  }
+}

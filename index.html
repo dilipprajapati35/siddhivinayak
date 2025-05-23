@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CustomerService – Mumbai</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <!-- Add Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Swiper initialization for image carousel -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".elementor-image-carousel-wrapper", {
+          slidesPerView: 1,
+          loop: true,
+          autoplay: {
+            delay: 1000,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".elementor-swiper-button-next",
+            prevEl: ".elementor-swiper-button-prev",
+          },
+        });
+      });
+    </script>
+
+    <!-- Add script for image modal functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all gallery image links
+        const imageLinks = document.querySelectorAll(".card a");
+
+        // Add click handler to each link
+        imageLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Set the clicked image src to the modal
+            const imageSrc = this.getAttribute("href");
+            document.getElementById("modalImage").src = imageSrc;
+
+            // Open the modal (Bootstrap will handle this via data attributes)
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand me-4" href="#">Customer Service</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown me-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Our Services
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="refrigerator-repair.html"
+                    >Refrigerator Repair</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="microwave-repair.html"
+                    >Microwave Repair</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="washing-machine-repair.html"
+                    >Washing Machine Repair</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tv-repair.html">TV Repair</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dryer-service.html"
+                    >Dryer Service Center</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="air-conditioner-service.html"
+                    >Air Conditioner Service Center</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- image carousel -->
+    <div id="carouselImages" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselImages"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselImages"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselImages"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/dds.jpeg"
+            class="d-block w-100"
+            alt="dds"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/WhatsApp-Image-2024-01-21-at-10.26.08-PM.jpeg"
+            class="d-block w-100"
+            alt="WhatsApp Image"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/fc-1.jpeg"
+            class="d-block w-100"
+            alt="fc-1"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselImages"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselImages"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- avaibility -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img
+              src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/12/appliances-group-image-1024x768.jpg"
+              class="img-fluid rounded"
+              alt="Appliances Group Image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2 class="mb-3">24x7 Customer Service Mumbai</h2>
+            <p class="lead">Enjoy our services at your doorstep now.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="mb-3">Get Our Service</h2>
+          <p class="lead">Why to choose us? Let's have a look.</p>
+        </div>
+
+        <div class="row">
+          <!-- Service Box 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm p-4 bg-light service-card">
+              <div class="text-center mb-3">
+                <i class="fas fa-clock fa-3x text-primary"></i>
+              </div>
+              <div class="card-body text-center px-0 pt-0">
+                <h4 class="card-title">On-Time Service</h4>
+                <p class="card-text">
+                  We fix your appliances on time. Our technician will reach you
+                  in 90mins without any delay.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Box 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm p-4 bg-light service-card">
+              <div class="text-center mb-3">
+                <i class="fas fa-tools fa-3x text-primary"></i>
+              </div>
+              <div class="card-body text-center px-0 pt-0">
+                <h4 class="card-title">Genuine Spares</h4>
+                <p class="card-text">
+                  We provide you genuine service with the genuine spare parts
+                  and warranty too. Book service now.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Box 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm p-4 bg-light service-card">
+              <div class="text-center mb-3">
+                <i class="fas fa-users-cog fa-3x text-primary"></i>
+              </div>
+              <div class="card-body text-center px-0 pt-0">
+                <h4 class="card-title">Professionals</h4>
+                <p class="card-text">
+                  We have 10+ years of expert technicians to provide any kind of
+                  repair for your appliances.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Gallery Section -->
+    <section
+      class="py-5"
+      style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+    >
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="mb-3">Our Services</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Gallery Image 1 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/yh.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/yh.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Gallery Image 2 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/ww.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/ww.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Gallery Image 3 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/nh.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/nh.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Gallery Image 4 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/HH.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/HH.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Gallery Image 5 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/fr.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/fr.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Gallery Image 6 -->
+          <div class="col-md-4 col-sm-6">
+  <div class="card border-light h-100 gallery-card">
+              <a
+                href="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/sa-1.png"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                      class="gallery-img-container"
+
+              >
+                <img
+                  src="https://siddhivinayak-service-center.in/wp-content/uploads/2024/10/sa-1.png"
+                  class="card-img-top img-fluid"
+                  alt="Service Image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <h2>Happy Customer</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal for Lightbox effect -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              src=""
+              id="modalImage"
+              class="img-fluid"
+              alt="Service Image Larger View"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section
+      class="py-5"
+      style="background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%)"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="card h-100 bg-light bg-opacity-75 border-0 shadow p-4 testimonial-card"
+            >
+              <div class="text-center mb-3">
+                <i class="fas fa-quote-left fa-2x text-primary"></i>
+              </div>
+              <div class="card-body pt-0">
+                <p class="card-text mb-4">
+                  I would recommend Just Repair India to my social group and
+                  family. The technician arrived within an hour and quickly
+                  diagnosed the problem—an issue with the drum's motor. He was
+                  not only professional but incredibly friendly, explaining what
+                  had gone wrong and how he would fix it. Within no time,
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://siddhivinayak-service-center.in/wp-content/plugins/elementor/assets/images/placeholder.png"
+                      class="rounded-circle"
+                      width="50"
+                      alt="Testimonial Avatar"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h5 class="mb-0">Arvind</h5>
+                    <p class="text-muted mb-0">Prajapati</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="card h-100 bg-light bg-opacity-75 border-0 shadow p-4 testimonial-card"
+            >
+              <div class="text-center mb-3">
+                <i class="fas fa-quote-left fa-2x text-primary"></i>
+              </div>
+              <div class="card-body pt-0">
+                <p class="card-text mb-4">
+                  He had the machine up and running smoothly again, and he even
+                  took the time to give me some tips on how to maintain it to
+                  prevent future issues. Really prompt service, extremely
+                  professional and punctual. I would recommend Just Repair India
+                  to my social group and family.
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://siddhivinayak-service-center.in/wp-content/plugins/elementor/assets/images/placeholder.png"
+                      class="rounded-circle"
+                      width="50"
+                      alt="Testimonial Avatar"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h5 class="mb-0">Vishal</h5>
+                    <p class="text-muted mb-0">Rawal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="card h-100 bg-light bg-opacity-75 border-0 shadow p-4 testimonial-card"
+            >
+              <div class="text-center mb-3">
+                <i class="fas fa-quote-left fa-2x text-primary"></i>
+              </div>
+              <div class="card-body pt-0">
+                <p class="card-text mb-4">
+                  Amazing service provided by the experts. My washing machine
+                  made very bad noise every time I spin the clothes, now it is
+                  too smooth. We earlier thought it is major issue, but it took
+                  10 minutes for the whole repairing work. I am extremely
+                  impressed. Thank you Repair.
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://siddhivinayak-service-center.in/wp-content/plugins/elementor/assets/images/placeholder.png"
+                      class="rounded-circle"
+                      width="50"
+                      alt="Testimonial Avatar"
+                    />
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h5 class="mb-0">Dilip</h5>
+                    <p class="text-muted mb-0">Kumar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-5 bg-dark text-white">
+      <div class="container footer-content">
+        <!-- Your existing footer content -->
+        <div class="row">
+          <!-- About Us Column -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h4 class="mb-3">About US</h4>
+            <p>
+              We at the Service provide all kinds Washing Machiene, TV,
+              Microwave, Fridge Annual Maintenance (AMC) Services.
+            </p>
+          </div>
+
+          <!-- Working Hours Column -->
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h4 class="mb-3">Working Hours</h4>
+            <p>
+              All Days 6:00 a.m. – 9:00 p.m.<br />24/7 Customer Service
+              Available
+            </p>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="col-md-4">
+            <h4 class="mb-3">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 pt-4 border-top border-secondary">
+          <p class="mb-0">&copy; 2025 Siddhi Vinayak. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Call Now Button (outside of the footer) -->
+    <a
+      href="tel:9090384407"
+      id="callnowbutton"
+      class="call-now-button cnb-zoom-100 cnb-zindex-10 cnb-text cnb-full cnb-full-bottom cnb-displaymode cnb-displaymode-always"
+      style="background-color: #008a00"
+    >
+      <img
+        alt=""
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTI3LjAxMzU1LDIzLjQ4ODU5bC0xLjc1MywxLjc1MzA1YTUuMDAxLDUuMDAxLDAsMCwxLTUuMTk5MjgsMS4xODI0M2MtMS45NzE5My0uNjkzNzItNC44NzMzNS0yLjM2NDM4LTguNDM4NDgtNS45Mjk1UzYuMzg3LDE0LjAyOCw1LjY5MzMsMTIuMDU2MTVBNS4wMDA3OCw1LjAwMDc4LDAsMCwxLDYuODc1NzMsNi44NTY4N0w4LjYyODc4LDUuMTAzNzZhMSwxLDAsMCwxLDEuNDE0MzEuMDAwMTJsMi44MjgsMi44Mjg4QTEsMSwwLDAsMSwxMi44NzEsOS4zNDY4TDExLjA2NDcsMTEuMTUzYTEuMDAzOCwxLjAwMzgsMCwwLDAtLjA4MjEsMS4zMjE3MSw0MC43NDI3OCw0MC43NDI3OCwwLDAsMCw0LjA3NjI0LDQuNTgzNzQsNDAuNzQxNDMsNDAuNzQxNDMsMCwwLDAsNC41ODM3NCw0LjA3NjIzLDEuMDAzNzksMS4wMDM3OSwwLDAsMCwxLjMyMTcxLS4wODIwOWwxLjgwNjIyLTEuODA2MjdhMSwxLDAsMCwxLDEuNDE0MTItLjAwMDEybDIuODI4OCwyLjgyOEExLjAwMDA3LDEuMDAwMDcsMCwwLDEsMjcuMDEzNTUsMjMuNDg4NTlaIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+"
+        width="40"
+      />
+      <span style="color: #ffffff">Toll Free 9090384407</span>
+    </a>
+  </body>
+</html>
